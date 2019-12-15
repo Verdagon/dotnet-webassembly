@@ -1,0 +1,295 @@
+﻿<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1E5F4130-D126-426A-9684-299DE2C1DC7A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <NoStandardLibraries>false</NoStandardLibraries>
+    <AssemblyName>ClassLibrary</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <LangVersion>preview</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RootNamespace>WebAssembly4</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BlockType.cs" />
+    <Compile Include="CustomSection.cs" />
+    <Compile Include="Data.cs" />
+    <Compile Include="Element.cs" />
+    <Compile Include="ElementType.cs" />
+    <Compile Include="Export.cs" />
+    <Compile Include="ExternalKind.cs" />
+    <Compile Include="Function.cs" />
+    <Compile Include="FunctionBody.cs" />
+    <Compile Include="FunctionType.cs" />
+    <Compile Include="Global.cs" />
+    <Compile Include="HashCode.cs" />
+    <Compile Include="Import.cs" />
+    <Compile Include="Instance.cs" />
+    <Compile Include="Instruction.cs" />
+    <Compile Include="Instructions\Block.cs" />
+    <Compile Include="Instructions\BlockTypeInstruction.cs" />
+    <Compile Include="Instructions\Branch.cs" />
+    <Compile Include="Instructions\BranchIf.cs" />
+    <Compile Include="Instructions\BranchTable.cs" />
+    <Compile Include="Instructions\Call.cs" />
+    <Compile Include="Instructions\CallIndirect.cs" />
+    <Compile Include="Instructions\Drop.cs" />
+    <Compile Include="Instructions\Else.cs" />
+    <Compile Include="Instructions\End.cs" />
+    <Compile Include="Instructions\Float32Absolute.cs" />
+    <Compile Include="Instructions\Float32Add.cs" />
+    <Compile Include="Instructions\Float32Ceiling.cs" />
+    <Compile Include="Instructions\Float32Constant.cs" />
+    <Compile Include="Instructions\Float32ConvertInt32Signed.cs" />
+    <Compile Include="Instructions\Float32ConvertInt32Unsigned.cs" />
+    <Compile Include="Instructions\Float32ConvertInt64Signed.cs" />
+    <Compile Include="Instructions\Float32ConvertInt64Unsigned.cs" />
+    <Compile Include="Instructions\Float32CopySign.cs" />
+    <Compile Include="Instructions\Float32DemoteFloat64.cs" />
+    <Compile Include="Instructions\Float32Divide.cs" />
+    <Compile Include="Instructions\Float32Equal.cs" />
+    <Compile Include="Instructions\Float32Floor.cs" />
+    <Compile Include="Instructions\Float32GreaterThan.cs" />
+    <Compile Include="Instructions\Float32GreaterThanOrEqual.cs" />
+    <Compile Include="Instructions\Float32LessThan.cs" />
+    <Compile Include="Instructions\Float32LessThanOrEqual.cs" />
+    <Compile Include="Instructions\Float32Load.cs" />
+    <Compile Include="Instructions\Float32Maximum.cs" />
+    <Compile Include="Instructions\Float32Minimum.cs" />
+    <Compile Include="Instructions\Float32Multiply.cs" />
+    <Compile Include="Instructions\Float32Nearest.cs" />
+    <Compile Include="Instructions\Float32Negate.cs" />
+    <Compile Include="Instructions\Float32NotEqual.cs" />
+    <Compile Include="Instructions\Float32ReinterpretInt32.cs" />
+    <Compile Include="Instructions\Float32SquareRoot.cs" />
+    <Compile Include="Instructions\Float32Store.cs" />
+    <Compile Include="Instructions\Float32Subtract.cs" />
+    <Compile Include="Instructions\Float32Truncate.cs" />
+    <Compile Include="Instructions\Float64Absolute.cs" />
+    <Compile Include="Instructions\Float64Add.cs" />
+    <Compile Include="Instructions\Float64CallWrapperInstruction.cs" />
+    <Compile Include="Instructions\Float64Ceiling.cs" />
+    <Compile Include="Instructions\Float64Constant.cs" />
+    <Compile Include="Instructions\Float64ConvertInt32Signed.cs" />
+    <Compile Include="Instructions\Float64ConvertInt32Unsigned.cs" />
+    <Compile Include="Instructions\Float64ConvertInt64Signed.cs" />
+    <Compile Include="Instructions\Float64ConvertInt64Unsigned.cs" />
+    <Compile Include="Instructions\Float64CopySign.cs" />
+    <Compile Include="Instructions\Float64Divide.cs" />
+    <Compile Include="Instructions\Float64Equal.cs" />
+    <Compile Include="Instructions\Float64Floor.cs" />
+    <Compile Include="Instructions\Float64GreaterThan.cs" />
+    <Compile Include="Instructions\Float64GreaterThanOrEqual.cs" />
+    <Compile Include="Instructions\Float64LessThan.cs" />
+    <Compile Include="Instructions\Float64LessThanOrEqual.cs" />
+    <Compile Include="Instructions\Float64Load.cs" />
+    <Compile Include="Instructions\Float64Maximum.cs" />
+    <Compile Include="Instructions\Float64Minimum.cs" />
+    <Compile Include="Instructions\Float64Multiply.cs" />
+    <Compile Include="Instructions\Float64Nearest.cs" />
+    <Compile Include="Instructions\Float64Negate.cs" />
+    <Compile Include="Instructions\Float64NotEqual.cs" />
+    <Compile Include="Instructions\Float64PromoteFloat32.cs" />
+    <Compile Include="Instructions\Float64ReinterpretInt64.cs" />
+    <Compile Include="Instructions\Float64SquareRoot.cs" />
+    <Compile Include="Instructions\Float64Store.cs" />
+    <Compile Include="Instructions\Float64Subtract.cs" />
+    <Compile Include="Instructions\Float64Truncate.cs" />
+    <Compile Include="Instructions\GlobalGet.cs" />
+    <Compile Include="Instructions\GlobalSet.cs" />
+    <Compile Include="Instructions\If.cs" />
+    <Compile Include="Instructions\Int32Add.cs" />
+    <Compile Include="Instructions\Int32And.cs" />
+    <Compile Include="Instructions\Int32Constant.cs" />
+    <Compile Include="Instructions\Int32CountLeadingZeroes.cs" />
+    <Compile Include="Instructions\Int32CountOneBits.cs" />
+    <Compile Include="Instructions\Int32CountTrailingZeroes.cs" />
+    <Compile Include="Instructions\Int32DivideSigned.cs" />
+    <Compile Include="Instructions\Int32DivideUnsigned.cs" />
+    <Compile Include="Instructions\Int32Equal.cs" />
+    <Compile Include="Instructions\Int32EqualZero.cs" />
+    <Compile Include="Instructions\Int32ExclusiveOr.cs" />
+    <Compile Include="Instructions\Int32GreaterThanOrEqualSigned.cs" />
+    <Compile Include="Instructions\Int32GreaterThanOrEqualUnsigned.cs" />
+    <Compile Include="Instructions\Int32GreaterThanSigned.cs" />
+    <Compile Include="Instructions\Int32GreaterThanUnsigned.cs" />
+    <Compile Include="Instructions\Int32LessThanOrEqualSigned.cs" />
+    <Compile Include="Instructions\Int32LessThanOrEqualUnsigned.cs" />
+    <Compile Include="Instructions\Int32LessThanSigned.cs" />
+    <Compile Include="Instructions\Int32LessThanUnsigned.cs" />
+    <Compile Include="Instructions\Int32Load.cs" />
+    <Compile Include="Instructions\Int32Load16Signed.cs" />
+    <Compile Include="Instructions\Int32Load16Unsigned.cs" />
+    <Compile Include="Instructions\Int32Load8Signed.cs" />
+    <Compile Include="Instructions\Int32Load8Unsigned.cs" />
+    <Compile Include="Instructions\Int32Multiply.cs" />
+    <Compile Include="Instructions\Int32NotEqual.cs" />
+    <Compile Include="Instructions\Int32Or.cs" />
+    <Compile Include="Instructions\Int32ReinterpretFloat32.cs" />
+    <Compile Include="Instructions\Int32RemainderSigned.cs" />
+    <Compile Include="Instructions\Int32RemainderUnsigned.cs" />
+    <Compile Include="Instructions\Int32RotateLeft.cs" />
+    <Compile Include="Instructions\Int32RotateRight.cs" />
+    <Compile Include="Instructions\Int32ShiftLeft.cs" />
+    <Compile Include="Instructions\Int32ShiftRightSigned.cs" />
+    <Compile Include="Instructions\Int32ShiftRightUnsigned.cs" />
+    <Compile Include="Instructions\Int32Store.cs" />
+    <Compile Include="Instructions\Int32Store16.cs" />
+    <Compile Include="Instructions\Int32Store8.cs" />
+    <Compile Include="Instructions\Int32Subtract.cs" />
+    <Compile Include="Instructions\Int32TruncateFloat32Signed.cs" />
+    <Compile Include="Instructions\Int32TruncateFloat32Unsigned.cs" />
+    <Compile Include="Instructions\Int32TruncateFloat64Signed.cs" />
+    <Compile Include="Instructions\Int32TruncateFloat64Unsigned.cs" />
+    <Compile Include="Instructions\Int32WrapInt64.cs" />
+    <Compile Include="Instructions\Int64Add.cs" />
+    <Compile Include="Instructions\Int64And.cs" />
+    <Compile Include="Instructions\Int64Constant.cs" />
+    <Compile Include="Instructions\Int64CountLeadingZeroes.cs" />
+    <Compile Include="Instructions\Int64CountOneBits.cs" />
+    <Compile Include="Instructions\Int64CountTrailingZeroes.cs" />
+    <Compile Include="Instructions\Int64DivideSigned.cs" />
+    <Compile Include="Instructions\Int64DivideUnsigned.cs" />
+    <Compile Include="Instructions\Int64Equal.cs" />
+    <Compile Include="Instructions\Int64EqualZero.cs" />
+    <Compile Include="Instructions\Int64ExclusiveOr.cs" />
+    <Compile Include="Instructions\Int64ExtendInt32Signed.cs" />
+    <Compile Include="Instructions\Int64ExtendInt32Unsigned.cs" />
+    <Compile Include="Instructions\Int64GreaterThanOrEqualSigned.cs" />
+    <Compile Include="Instructions\Int64GreaterThanOrEqualUnsigned.cs" />
+    <Compile Include="Instructions\Int64GreaterThanSigned.cs" />
+    <Compile Include="Instructions\Int64GreaterThanUnsigned.cs" />
+    <Compile Include="Instructions\Int64LessThanOrEqualSigned.cs" />
+    <Compile Include="Instructions\Int64LessThanOrEqualUnsigned.cs" />
+    <Compile Include="Instructions\Int64LessThanSigned.cs" />
+    <Compile Include="Instructions\Int64LessThanUnsigned.cs" />
+    <Compile Include="Instructions\Int64Load.cs" />
+    <Compile Include="Instructions\Int64Load16Signed.cs" />
+    <Compile Include="Instructions\Int64Load16Unsigned.cs" />
+    <Compile Include="Instructions\Int64Load32Signed.cs" />
+    <Compile Include="Instructions\Int64Load32Unsigned.cs" />
+    <Compile Include="Instructions\Int64Load8Signed.cs" />
+    <Compile Include="Instructions\Int64Load8Unsigned.cs" />
+    <Compile Include="Instructions\Int64Multiply.cs" />
+    <Compile Include="Instructions\Int64NotEqual.cs" />
+    <Compile Include="Instructions\Int64Or.cs" />
+    <Compile Include="Instructions\Int64ReinterpretFloat64.cs" />
+    <Compile Include="Instructions\Int64RemainderSigned.cs" />
+    <Compile Include="Instructions\Int64RemainderUnsigned.cs" />
+    <Compile Include="Instructions\Int64RotateLeft.cs" />
+    <Compile Include="Instructions\Int64RotateRight.cs" />
+    <Compile Include="Instructions\Int64ShiftLeft.cs" />
+    <Compile Include="Instructions\Int64ShiftRightSigned.cs" />
+    <Compile Include="Instructions\Int64ShiftRightUnsigned.cs" />
+    <Compile Include="Instructions\Int64Store.cs" />
+    <Compile Include="Instructions\Int64Store16.cs" />
+    <Compile Include="Instructions\Int64Store32.cs" />
+    <Compile Include="Instructions\Int64Store8.cs" />
+    <Compile Include="Instructions\Int64Subtract.cs" />
+    <Compile Include="Instructions\Int64TruncateFloat32Signed.cs" />
+    <Compile Include="Instructions\Int64TruncateFloat32Unsigned.cs" />
+    <Compile Include="Instructions\Int64TruncateFloat64Signed.cs" />
+    <Compile Include="Instructions\Int64TruncateFloat64Unsigned.cs" />
+    <Compile Include="Instructions\LocalGet.cs" />
+    <Compile Include="Instructions\LocalSet.cs" />
+    <Compile Include="Instructions\LocalTee.cs" />
+    <Compile Include="Instructions\Loop.cs" />
+    <Compile Include="Instructions\MemoryGrow.cs" />
+    <Compile Include="Instructions\MemoryImmediateInstruction.cs" />
+    <Compile Include="Instructions\MemoryReadInstruction.cs" />
+    <Compile Include="Instructions\MemorySize.cs" />
+    <Compile Include="Instructions\MemoryWriteInstruction.cs" />
+    <Compile Include="Instructions\NoOperation.cs" />
+    <Compile Include="Instructions\Return.cs" />
+    <Compile Include="Instructions\Select.cs" />
+    <Compile Include="Instructions\SimpleInstruction.cs" />
+    <Compile Include="Instructions\Unreachable.cs" />
+    <Compile Include="Instructions\ValueOneToOneCallInstruction.cs" />
+    <Compile Include="Instructions\ValueOneToOneInstruction.cs" />
+    <Compile Include="Instructions\ValueTwoToInt32Instruction.cs" />
+    <Compile Include="Instructions\ValueTwoToInt32NotEqualZeroInstruction.cs" />
+    <Compile Include="Instructions\ValueTwoToOneCallInstruction.cs" />
+    <Compile Include="Instructions\ValueTwoToOneInstruction.cs" />
+    <Compile Include="Instructions\VariableAccessInstruction.cs" />
+    <Compile Include="Local.cs" />
+    <Compile Include="Memory.cs" />
+    <Compile Include="Module.cs" />
+    <Compile Include="ModuleLoadException.cs" />
+    <Compile Include="OpCode.cs" />
+    <Compile Include="OpCodeCharacteristicsAttribute.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reader.cs" />
+    <Compile Include="RegeneratingWeakReference.cs" />
+    <Compile Include="ResizeableLimits.cs" />
+    <Compile Include="Runtime\Compilation\CompilationContext.cs" />
+    <Compile Include="Runtime\Compilation\GlobalInfo.cs" />
+    <Compile Include="Runtime\Compilation\HelperMethod.cs" />
+    <Compile Include="Runtime\Compilation\ILGeneratorExtensions.cs" />
+    <Compile Include="Runtime\Compilation\Signature.cs" />
+    <Compile Include="Runtime\Compile.cs" />
+    <Compile Include="Runtime\CompilerConfiguration.cs" />
+    <Compile Include="Runtime\CompilerException.cs" />
+    <Compile Include="Runtime\FunctionImport.cs" />
+    <Compile Include="Runtime\FunctionTable.cs" />
+    <Compile Include="Runtime\GlobalImport.cs" />
+    <Compile Include="Runtime\Helpers.cs" />
+    <Compile Include="Runtime\ImportDictionary.cs" />
+    <Compile Include="Runtime\MemoryAccessOutOfRangeException.cs" />
+    <Compile Include="Runtime\MemoryImport.cs" />
+    <Compile Include="Runtime\MissingDelegateTypesException.cs" />
+    <Compile Include="Runtime\OpCodeCompilationException.cs" />
+    <Compile Include="Runtime\RuntimeException.cs" />
+    <Compile Include="Runtime\RuntimeImport.cs" />
+    <Compile Include="Runtime\StackParameterMismatchException.cs" />
+    <Compile Include="Runtime\StackSizeIncorrectException.cs" />
+    <Compile Include="Runtime\StackTooSmallException.cs" />
+    <Compile Include="Runtime\StackTypeInvalidException.cs" />
+    <Compile Include="Runtime\TableImport.cs" />
+    <Compile Include="Runtime\UnmanagedMemory.cs" />
+    <Compile Include="Runtime\UnreachableException.cs" />
+    <Compile Include="Section.cs" />
+    <Compile Include="Table.cs" />
+    <Compile Include="WebAssemblyType.cs" />
+    <Compile Include="WebAsssemblyValueType.cs" />
+    <Compile Include="Writer.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\WebAssembly.snk" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include=".vs\WebAssembly4\v16\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSHARP.Targets" />
+  <ProjectExtensions>
+    <VisualStudio AllowExistingFolder="true" />
+  </ProjectExtensions>
+</Project>

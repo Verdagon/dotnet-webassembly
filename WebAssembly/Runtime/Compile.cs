@@ -195,12 +195,12 @@ namespace WebAssembly.Runtime
             KeyValuePair<string, uint>[]? exportedFunctions = null;
             var previousSection = Section.None;
 
-            var module = AssemblyBuilder.DefineDynamicAssembly(
-                new AssemblyName("CompiledWebAssembly"),
-                AssemblyBuilderAccess.RunAndCollect
-                )
-                .DefineDynamicModule("CompiledWebAssembly")
-                ;
+            var assemblyBuilder =
+                AssemblyBuilder.DefineDynamicAssembly(
+                    new AssemblyName("CompiledWebAssembly"),
+                    AssemblyBuilderAccess.RunAndCollect);
+
+            var module = assemblyBuilder.DefineDynamicModule("CompiledWebAssembly");
 
             const TypeAttributes classAttributes =
                 TypeAttributes.Public |
@@ -1262,6 +1262,9 @@ namespace WebAssembly.Runtime
             }
 
             module.CreateGlobalFunctions();
+
+            assemblyBuilder.Save("something.dll");
+
             return instance.DeclaredConstructors.First();
         }
 

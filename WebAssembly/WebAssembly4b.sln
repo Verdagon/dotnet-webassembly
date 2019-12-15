@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29411.108
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAssembly4b", "WebAssembly4b.csproj", "{0BEE759D-CB88-4630-BED6-EA60A31EF22D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAssembly4b.Tests", "WebAssembly4b.Tests\WebAssembly4b.Tests.csproj", "{F49D5D25-DB45-4953-AF35-E97F9D197539}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0BEE759D-CB88-4630-BED6-EA60A31EF22D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0BEE759D-CB88-4630-BED6-EA60A31EF22D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0BEE759D-CB88-4630-BED6-EA60A31EF22D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0BEE759D-CB88-4630-BED6-EA60A31EF22D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F49D5D25-DB45-4953-AF35-E97F9D197539}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F49D5D25-DB45-4953-AF35-E97F9D197539}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F49D5D25-DB45-4953-AF35-E97F9D197539}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F49D5D25-DB45-4953-AF35-E97F9D197539}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4BEA12B9-F99F-4A56-86FC-869EC73B524D}
+	EndGlobalSection
+EndGlobal

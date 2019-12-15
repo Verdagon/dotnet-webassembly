@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>netstandard2.0;netstandard2.1</TargetFrameworks>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <Title>WebAssembly for .NET</Title>
     <Authors>Ryan Lamansky</Authors>
     <Description>Create, read, modify, write and execute WebAssembly (WASM) files.</Description>
@@ -27,7 +27,7 @@
     <None Include="../LICENSE" Pack="true" PackagePath="LICENSE" />
   </ItemGroup>
 
-  <ItemGroup Condition="'$(TargetFramework)' == 'netstandard2.0'">
+  <!--ItemGroup Condition="'$(TargetFramework)' == 'netstandard2.0'">
     <PackageReference Include="System.Reflection.Emit" Version="4.3.0" />
   </ItemGroup>
 
@@ -39,6 +39,6 @@
   <PropertyGroup Condition="'$(TargetFramework)' == 'netstandard2.1'">
     <AssemblyTitle>WebAssembly for .NET Standard 2.1</AssemblyTitle>
     <DefineConstants>FILESTREAM;ARRAY_EMPTY</DefineConstants>
-  </PropertyGroup>
+  </PropertyGroup-->
 
 </Project>
