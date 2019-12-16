@@ -198,9 +198,9 @@ namespace WebAssembly.Runtime
             var assemblyBuilder =
                 AssemblyBuilder.DefineDynamicAssembly(
                     new AssemblyName("CompiledWebAssembly"),
-                    AssemblyBuilderAccess.RunAndCollect);
+                    AssemblyBuilderAccess.RunAndSave);
 
-            var module = assemblyBuilder.DefineDynamicModule("CompiledWebAssembly");
+            var module = assemblyBuilder.DefineDynamicModule("CompiledWebAssembly", "CompiledWebAssembly.dll");
 
             const TypeAttributes classAttributes =
                 TypeAttributes.Public |

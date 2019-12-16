@@ -620,7 +620,7 @@ namespace WebAssembly
         /// </summary>
 		/// <returns>A function that creates runnable instances.</returns>
 		/// <exception cref="ModuleLoadException">An error was encountered while reading the WebAssembly file.</exception>
-        public InstanceCreator<TExports> Compile<TExports>()
+        public void Compile<TExports>()
         where TExports : class
         {
             //TODO: A more direct compilation process will be faster and create less garbage.
@@ -628,7 +628,7 @@ namespace WebAssembly
             {
                 this.WriteToBinary(memory);
                 memory.Position = 0;
-                return Runtime.Compile.FromBinary<TExports>(memory);
+                Runtime.Compile.FromBinary<TExports>(memory);
             }
         }
     }

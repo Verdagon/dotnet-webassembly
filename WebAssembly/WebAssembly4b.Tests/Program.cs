@@ -24,6 +24,66 @@ namespace WebAssembly4b.Tests {
   class Program {
     static void Main(string[] args) {
 
+
+      
+            //var module = new Module();
+            //module.Memories.Add(new Memory(1, 1));
+
+            //module.Types.Add(new WebAssemblyType
+            //{
+            //});
+            //module.Types.Add(new WebAssemblyType
+            //{
+            //    Returns = new[]
+            //    {
+            //        WebAssemblyValueType.Int32,
+            //    }
+            //});
+
+            //module.Functions.Add(new Function
+            //{
+            //});
+            //module.Functions.Add(new Function
+            //{
+            //    Type = 1,
+            //});
+
+            //module.Codes.Add(new FunctionBody
+            //{
+            //    Code = new Instruction[]
+            //    {
+            //        new Int32Constant(1),
+            //        new Int32Constant(2),
+            //        new Int32Store(),
+            //        new End(),
+            //    },
+            //});
+
+            //module.Codes.Add(new FunctionBody
+            //{
+            //    Code = new Instruction[]
+            //    {
+            //        new Int32Constant(1),
+            //        new Int32Load(),
+            //        new End(),
+            //    },
+            //});
+
+            //module.Start = 0;
+
+            //module.Exports.Add(new Export
+            //{
+            //    Index = 1,
+            //    Name = "Test",
+            //});
+
+
+
+
+
+
+
+
       var module = new Module();
       module.Types.Add(new WebAssemblyType {
         Returns = new[]
@@ -44,7 +104,7 @@ namespace WebAssembly4b.Tests {
           },
       });
 
-      var compiled = module.Compile<HelloWorldExports>();
+       module.Compile<HelloWorldExports>();
 
       //var exports = compiled.Exports;
       //Assert.AreEqual(3, exports.Start());

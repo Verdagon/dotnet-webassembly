@@ -1,5 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
-
+﻿<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="Current">
   <PropertyGroup>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <Title>WebAssembly for .NET</Title>
@@ -21,12 +20,47 @@
     <TreatWarningsAsErrors>True</TreatWarningsAsErrors>
     <TreatSpecificWarningsAsErrors />
     <DocumentationFile>bin\WebAssembly.xml</DocumentationFile>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <ProjectGuid>{E9676C8C-A671-4978-8C62-40BBA257A597}</ProjectGuid>
   </PropertyGroup>
-
   <ItemGroup>
     <None Include="../LICENSE" Pack="true" PackagePath="LICENSE" />
   </ItemGroup>
-
+  <ItemGroup>
+    <Compile Include="BlockType.cs" />
+    <Compile Include="CustomSection.cs" />
+    <Compile Include="Data.cs" />
+    <Compile Include="Element.cs" />
+    <Compile Include="ElementType.cs" />
+    <Compile Include="Export.cs" />
+    <Compile Include="ExternalKind.cs" />
+    <Compile Include="Function.cs" />
+    <Compile Include="FunctionBody.cs" />
+    <Compile Include="FunctionType.cs" />
+    <Compile Include="Global.cs" />
+    <Compile Include="HashCode.cs" />
+    <Compile Include="Import.cs" />
+    <Compile Include="Instance.cs" />
+    <Compile Include="Instruction.cs" />
+    <Compile Include="Local.cs" />
+    <Compile Include="Memory.cs" />
+    <Compile Include="Module.cs" />
+    <Compile Include="ModuleLoadException.cs" />
+    <Compile Include="OpCode.cs" />
+    <Compile Include="OpCodeCharacteristicsAttribute.cs" />
+    <Compile Include="Reader.cs" />
+    <Compile Include="RegeneratingWeakReference.cs" />
+    <Compile Include="ResizeableLimits.cs" />
+    <Compile Include="Section.cs" />
+    <Compile Include="Table.cs" />
+    <Compile Include="WebAssemblyType.cs" />
+    <Compile Include="WebAsssemblyValueType.cs" />
+    <Compile Include="Writer.cs" />
+  </ItemGroup>
   <!--ItemGroup Condition="'$(TargetFramework)' == 'netstandard2.0'">
     <PackageReference Include="System.Reflection.Emit" Version="4.3.0" />
   </ItemGroup>
@@ -40,5 +74,4 @@
     <AssemblyTitle>WebAssembly for .NET Standard 2.1</AssemblyTitle>
     <DefineConstants>FILESTREAM;ARRAY_EMPTY</DefineConstants>
   </PropertyGroup-->
-
 </Project>
